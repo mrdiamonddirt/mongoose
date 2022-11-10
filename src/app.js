@@ -17,6 +17,11 @@ async function myApp(yargsObject) {
     } else if (yargsObject.delete) {
         // code to delete a movie
         await deleteMovie({title: yargsObject.title});
+        if (deleteMovie === 1 ) {
+            console.log('Movie Deleted')
+        } else {
+            console.log('Movie Not Found')
+        }
     } else {
         console.log('Please enter a valid command');
     };
